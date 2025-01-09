@@ -1,8 +1,9 @@
 // app/providers.tsx
 'use client'
 
-import { ChakraProvider } from '@chakra-ui/react'
+import { ProductProvider } from "@/context/context"
+
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  return <ChakraProvider>{children}</ChakraProvider>
+  return <ProductProvider>{children}</ProductProvider>
 }
