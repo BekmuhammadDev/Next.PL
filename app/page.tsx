@@ -1,6 +1,8 @@
 'use client'
 import React, { useContext } from "react";
 import { ProductContext } from "@/context/context";
+import Image from "next/image";
+
 
 const Home: React.FC = () => {
   const context = useContext(ProductContext);
@@ -18,7 +20,7 @@ const Home: React.FC = () => {
         {products.map((product) => (
           <div key={product.id} className="border w-[200px] h-auto ">
            <div className="p-4">
-           <img
+           <Image
               src={product.image}
               alt={product.productName}
               className="w-full h-[120px] object-cover mb-4"

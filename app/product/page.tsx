@@ -4,6 +4,7 @@ import { ProductContext } from "@/context/context";
 import { FiTrash } from "react-icons/fi";
 import { LuPencilLine } from "react-icons/lu";
 
+
 const ProductPage: React.FC = () => {
   const { products, addProduct, deleteProduct } = useContext(ProductContext)!;
   const [showModal, setShowModal] = useState(false);

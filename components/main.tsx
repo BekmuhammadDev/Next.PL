@@ -1,16 +1,20 @@
-"use client"
-import { ProductProvider } from '@/context/context';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React from 'react';
+"use client";
 
-const index = ({children}:{children:React.JSX.Element | any}) => {
-    return (
-        <ProductProvider>
-        <main className='min-h-screen w-full'>
-            {children}
-        </main>
-        </ProductProvider>
-    );
+import { ProductProvider } from '@/context/context';
+import React, { ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+}
+
+const Index: React.FC<Props> = ({ children }) => {
+  return (
+    <ProductProvider>
+      <main className="min-h-screen w-full">
+        {children}
+      </main>
+    </ProductProvider>
+  );
 };
 
-export default index;
+export default Index;
